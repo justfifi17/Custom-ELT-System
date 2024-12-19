@@ -22,6 +22,9 @@ INSERT INTO users (first_name, last_name, email, date_of_birth) VALUES
 ('Grace', 'Wright', 'grace.wright@example.com', '1997-05-10'),
 ('William', 'Scott', 'william.scott@example.com', '1986-07-22');
 
+CREATE INDEX idx_user_email ON users (email);
+
+
 CREATE TABLE films (
     film_id SERIAL PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
